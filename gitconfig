@@ -1,0 +1,28 @@
+[credential]
+	helper = osxkeychain
+[user]
+	name = Dan Middleton\n
+	email = dan.middleton@intel.com
+[core]
+    autocrlf = input
+	excludesfile = /Users/dcmiddle/.gitignore
+	editor = vim
+[diff]
+   	algorithm = patience
+[push]
+   	default = matching
+[alias]
+	slog = log --pretty=format:\"%h - %an, %ar : %s\"
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
