@@ -1,7 +1,7 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export GIT_SSH='/usr/local/bin/ssh'
+# export GIT_SSH='/usr/local/bin/ssh'
 
 alias ls='ls -GFh'
 alias ll='ls -Gl'

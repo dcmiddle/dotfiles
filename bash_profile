@@ -13,10 +13,14 @@ export PATH="/usr/local/go/bin:$PATH"
 # if [ -f ~/.git-completion.bash ]; then
 #     . ~/.git-completion.bash
 # fi
-[[ -f /usr/local/etc/bash_completion ]] && \
-    . /usr/local/etc/bash_completion
-[[ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]] && \
-    . /usr/local/etc/bash_completion.d/git-prompt.sh
+# [[ -f /usr/local/etc/bash_completion ]] && \
+#     . /usr/local/etc/bash_completion
+# [[ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]] && \
+#     . /usr/local/etc/bash_completion.d/git-prompt.sh
+
+. /usr/local/git/contrib/completion/git-completion.bash
+. /usr/local/git/contrib/completion/git-prompt.sh
+
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
