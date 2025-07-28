@@ -31,6 +31,23 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# Prompt (clean, visible, easily tuned)
-PROMPT='%F{green}%n@%m%f:%F{blue}%~%f %# '
+# Prompt
+autoload -Uz vcs_info
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd vcs_info
+
+# Configure vcs_info formats - note sensitivity to single / double quotes
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats "%b%u"
+# Hook to detect dirty status
+zstyle ':vcs_info:git:*' hooks git-untracked
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "+"
+zstyle ':vcs_info:git:*' unstagedstr "*"
+
+# Suggested prompt user@host:path %
+# PROMPT='%F{green}%n@%m%f:%F{blue}%~%f %# '
+# Git oriented prompt. No user@host. Just path and branch.
+setopt prompt_subst
+PROMPT='%F{blue}%~%f %F{green}(${vcs_info_msg_0_})%F{white}%# '
 
