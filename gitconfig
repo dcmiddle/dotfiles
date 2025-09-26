@@ -2,7 +2,7 @@
 	helper = osxkeychain
 [user]
 	name = Dan Middleton\n
-	email = dan.middleton@intel.com
+	email = dmiddleton@nvidia.com
 [core]
     autocrlf = input
 	excludesfile = /Users/dcmiddle/.gitignore
